@@ -2,7 +2,6 @@ package com.aulasspring.aulasspring.entities;
 
 import com.aulasspring.aulasspring.entities.Pk.OrderItemPK;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
