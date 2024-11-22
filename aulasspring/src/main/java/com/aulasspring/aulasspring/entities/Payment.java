@@ -1,5 +1,6 @@
 package com.aulasspring.aulasspring.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -10,10 +11,13 @@ import java.util.Objects;
 @Table(name ="tb_payment")
 public class Payment  implements Serializable {
     private static final long serialValueUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Instant moment;
+
+    @JsonIgnore
     @OneToOne
     @MapsId
     private Order order;
